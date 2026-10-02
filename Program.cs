@@ -65,23 +65,59 @@
 
 // Console.WriteLine("Дневник сохранён");
 
-int count = 0;
-Console.WriteLine("Вводите имена, для завершения введите «конец»:");
-string name = Console.ReadLine();
+// int count = 0;
+// Console.WriteLine("Вводите имена, для завершения введите «конец»:");
+// string name = Console.ReadLine();
 
-while (name != "конец")
+// while (name != "конец")
+// {
+//     count++;
+//     name = Console.ReadLine();
+// }
+
+// Console.WriteLine($"Введено имён: {count}");
+
+
+// int n = 7;
+// int i = 1;
+// while (i <= 10)
+// {
+//     Console.WriteLine($"{n} x {i} = {n * i}");
+//     i++;
+// }
+
+// Console.Write("Введите свою фамилию: ");
+// string surname = Console.ReadLine()!.Trim();
+
+// if (string.IsNullOrEmpty(surname))
+// {
+//     Console.WriteLine("Фамилия не введена. Завершение работы.");
+//     return;
+// }
+// Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
+// var assigned = Enumerable.Range(1, 10)
+//     .OrderBy(_ => rnd.Next())
+//     .Take(2).OrderBy(x => x)
+//     .ToList();
+
+// Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
+
+Console.WriteLine("Вводите символы по одному, для завершения введите q:");
+char c = char.Parse(Console.ReadLine());
+int count = 0;
+while (c != 'q')
 {
     count++;
-    name = Console.ReadLine();
+    c = char.Parse(Console.ReadLine());
 }
+Console.WriteLine($"Введено символов (без q): {count}");
 
-Console.WriteLine($"Введено имён: {count}");
-
-
-int n = 7;
-int i = 1;
-while (i <= 10)
+Console.WriteLine("Введите целое положительное число:");
+int n = int.Parse(Console.ReadLine());
+int count = 0;
+while (n != 0)
 {
-    Console.WriteLine($"{n} x {i} = {n * i}");
-    i++;
+    n = n / 10;
+    count++;
 }
+Console.WriteLine($"Цифры: {count}");
